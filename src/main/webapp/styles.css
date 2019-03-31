@@ -1,0 +1,26 @@
+.card-body {
+    padding: 0px;
+}
+.card {
+    border: none;
+}
+.btn-group {
+    width: 100%;
+}
+textarea {
+    resize: none;
+}
+.card-template,
+.card-add {
+    display: none;
+}
+form {
+    padding: 5px!important;
+}
+.col-store {
+    border-left: 1px solid;
+}
+.stock,
+.store {
+    padding: 5px;
+}

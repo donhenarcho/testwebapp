@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TestWebApp</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm col-stock">
+                    <h3>Stock</h3>
+                    <div class="row stock"></div>
+                </div>
+                <div class="col-sm col-store">
+                    <h3>Store</h3>
+                    <div class="row store"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+    <div class="card-template">
+        <form class="col-sm-4 item-{id}">
+            <div class="card">
+                <div class="card-header">#{id}</div>
+                <div class="card-body">
+                    <select class="custom-select item-type">
+                        <option value="DRESS">DRESS</option>
+                        <option value="PANTS">PANTS</option>
+                        <option value="SKIRT">SKIRT</option>
+                        <option value="VEST">VEST</option>
+                        <option value="SHIRT">SHIRT</option>
+                    </select>
+                    <select class="custom-select item-color">
+                        <option value="WHITE">WHITE</option>
+                        <option value="BLUE">BLUE</option>
+                        <option value="RED">RED</option>
+                        <option value="GREEN">GREEN</option>
+                        <option value="BLACK">BLACK</option>
+                    </select>
+                    <select class="custom-select item-size">
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                    </select>
+                    <textarea class="form-control item-description" rows="3" placeholder="Description">{item-description}</textarea>
+                    <input type="text" class="form-control item-cost" placeholder="Cost" value="{item-cost}">
+                    <input type="hidden" class="item-location" value="{item-location}">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-danger" title="Delete" onclick="del({id});"><i class="fas fa-trash-alt"></i></button>
+                        <button type="button" class="btn btn-outline-info" title="Save" onclick="save({id});"><i class="fas fa-save"></i></button>
+                        <button type="button" class="btn btn-outline-dark" title="{title-relocate}" onclick="relocate({id})"><i class="fas fa-{icon-relocate}"></i></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-add">
+        <form class="col-sm-4">
+            <div class="card">
+                <button type="button" class="btn btn-sm btn-outline-success" onclick="addTo('{location}');">+</button>
+            </div>
+        </form>
+    </div>
+</html>

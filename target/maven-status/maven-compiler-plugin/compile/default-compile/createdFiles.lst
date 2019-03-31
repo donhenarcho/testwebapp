@@ -1,0 +1,8 @@
+controllers\StoreController.class
+beans\ItemsBean.class
+item\Color.class
+controllers\StockController.class
+MainApplication.class
+item\Location.class
+item\Item.class
+item\Type.class
